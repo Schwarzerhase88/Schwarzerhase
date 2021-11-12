@@ -1,0 +1,71 @@
+package package_java_gui;
+
+import java.sql.*;
+
+public class Java_MySQL_main {
+    
+    Connection con;
+
+    public Java_MySQL_main() {
+        
+        String url = "jdbc:mysql://localhost:3306/onlineshop";
+        String user = "root";
+        String pass = "";
+
+        try {
+        con = DriverManager.getConnection(url, user, pass);
+        System.out.println("Verbindung erfolgreich hergestellt");
+
+        } catch (SQLException e) {
+        System.out.println("Verbindung fehlgeschlagen");
+        }
+
+    }
+    
+    public void einfuegen( String anrede, String vname, String nachname, String fachrichtung, String standort, String email ){
+        
+        
+            try {
+                Statement stm = con.createStatement();
+                ResultSet rs = stm.executeQuery("SELECT * FROM stammkunden;");
+
+                
+                
+                
+            while(rs.next()){
+                System.out.println(rs.getString(1) + " " +
+                        rs.getString(2) + " " +
+                        rs.getString(3) + " " +
+                        rs.getString(4) + " " +
+                        rs.getString(5) + " " +
+                        rs.getString(6));
+            }
+             
+            
+            if ( anrede +vname+ nachname+ fachrichtung+ standort+ email != rs.getString(1+ 2+ 3+ 4+ 5+ 6 )  )   //rs.getString(1+ 2+ 3+ 4+ 5+ 6 )
+            {
+                String sql =                                                                            
+                "INSERT INTO stammkunden( anrede, vname, nname, fachrichtung, standort, email ) VALUES ('" + anrede + "','" + vname + "','" + nachname + "','"  + fachrichtung + "','"  + standort + "','" + email +  "')";
+                stm.execute(sql);
+            } 
+            
+            
+            else
+                System.out.println("Daten schon vorhanden !");
+                }
+            
+            catch (SQLException e) {
+            e.printStackTrace();
+            }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+}
