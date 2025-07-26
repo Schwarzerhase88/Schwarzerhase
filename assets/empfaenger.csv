@@ -1,0 +1,4 @@
+Sendungsnummer,Datum/Uhrzeit,Paketdienst,Empfänger,Absender,Unterschrift
+123456789,2025-05-12T14:33:00,DHL,Max Mustermann,Amazon GmbH,
+987654321,2025-05-12T14:35:00,DPD,Erika Musterfrau,Otto GmbH,
+
