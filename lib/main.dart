@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 }
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
 class ProfileScreen extends StatelessWidget {
   final String username;
 
-  const ProfileScreen({Key? key, required this.username}) : super(key: key);
+  const ProfileScreen({super.key, required this.username});
 
   @override
   Widget build(BuildContext context) {
