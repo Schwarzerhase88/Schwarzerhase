@@ -33,7 +33,7 @@ class _ProfielScreenState extends State<ProfielScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Willkommen, ${widget.username}',
-                    style: Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white)),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white)),
                 const SizedBox(height: 16),
                 _buildField('Lieblingsfarbe', _colorController),
                 const SizedBox(height: 12),
