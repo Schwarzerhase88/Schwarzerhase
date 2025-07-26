@@ -1,0 +1,21 @@
+# Flutter build
+build/
+
+# Misc
+.dart_tool/
+.packages
+.pub/
+flutter_*.png
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Flutter plugin files
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Packages
+pubspec.lock
